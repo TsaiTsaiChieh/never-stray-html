@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Never Stray</title>
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
     <link rel="stylesheet" href="./css/all.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="header container">
+            <a href="#" class="logo"><img src="./public/logo.svg" alt="logo"></a>
+            <div class="login-wrap">
+                <div class="avatar"></div>
+                <span>登入</span>
+            </div>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="menu-container container">
+            <div class="filter-wrap">
+                <img src="./public/filter.svg" alt="filter">
+                <span>篩選</span>
+            </div>
+            <div class="option-wrap">
+                <div class="option all-option active"><img src="./public/all-option.svg" alt="all-option"/><span></span></div>
+                <div class="option cat-option"><img src="./public/cat-option.svg" alt="cat-option"/><span></span></div>
+                <div class="option dog-option"><img src="./public/dog-option.svg" alt="dog-option"/><span></span></div>
+            </div>
+            <div class="search-wrap">
+                <input type="text" name="search" placeholder="關鍵字、顏色、性別">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
