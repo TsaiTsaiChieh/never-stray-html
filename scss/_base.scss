@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Huninn";
+    font-weight: normal;
+    font-display: swap;
+    src: url("/font/jf-openhuninn.woff2") format("woff2");
+  }
+
+body {
+    font-family: "Huninn", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    line-height: 1.5;
+    color: $c-gray-500;
+    font-size: $s-s;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1280px;
+    width: 80%;
+    margin: auto;
+    @include pad {
+        width: 85%;
+    }
+    @include mobile {
+        width: 90%;
+    }
+}
