@@ -1,0 +1,47 @@
+header {
+    border-bottom: 3px solid $c-main;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px auto;
+        align-items: center;
+    }
+    .login-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .avatar {
+            width: 35px;
+            height: 35px;
+            border: 2px solid $c-main;
+            border-radius: 50%;
+        }
+        span {
+            margin-left: 11px;
+            cursor: pointer;
+            font-size: $s-m;
+        }
+    }
+    @include pad {
+    position: relative;
+    .container {
+        justify-content: center;
+    }
+    .login-wrap {
+        position: absolute;
+        right: 7.5%;
+    }
+    }
+    @include mobile {
+        .login-wrap {
+            position: absolute;
+            right: 5%;
+            .avatar {
+                display: none;
+            }
+        }
+
+    }
+}
+
