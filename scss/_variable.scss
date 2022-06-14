@@ -1,0 +1,25 @@
+// size
+$s-sx: 14px;
+$s-s: 16px;
+$s-m: 18px;
+$s-l: 20px;
+$s-xl: 22px;
+
+// color
+$c-main: #61DED7;
+$c-main-light: lighten($c-main, 10%);
+$c-main-100: #95EED9;
+$c-main-200: #EBFAF6;
+$c-second: #00948B;
+$c-blue: #2D9CDB;
+$c-white: #FFFFFF;
+$c-gray-100: #CECECE;
+$c-gray-200: #BDBDBD;
+$c-gray-300: #9FA0A0;
+$c-gray-400: #828282;
+$c-gray-500: #4F4F4F;
+$c-gray-600: #333333;
+$c-gray-700: #000000;
+// filter
+$f-second: invert(36%) sepia(76%) saturate(1207%) hue-rotate(144deg) brightness(94%) contrast(101%);
+$f-white: invert(95%) sepia(5%) saturate(0%) hue-rotate(5deg) brightness(103%) contrast(107%);
