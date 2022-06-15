@@ -1,7 +1,7 @@
 .menu {
     background: $c-main-200;
-    padding: 4px 0;
-   position: relative;
+    padding: 12px 0;
+    position: relative;
     .menu-container {
         display: flex;
         justify-content: center;
@@ -13,12 +13,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 25px;
-
+            gap: 5px;
             .option {
                 border-radius: 10px;
-                padding: 7px 10px;
-
+                padding: 7px 5px;
                 &.active {
                     background: $c-main;
                     img {
@@ -28,82 +26,111 @@
                         color: $c-white;
                     }
                 }
-
                 span {
                     letter-spacing: 0.15em;
+                    &::after {
+                        font-size: 15px;
+                    }
                 }
-
                 &:hover {
                     background: $c-main-light;
-
                     img {
                         filter: $f-white;
                     }
-
                     span {
                         color: $c-white;
                     }
                 }
             }
-
             img {
-                width: 35px;
-                height: 35px;
+                width: 27px;
+                height: 27px;
                 filter: $f-second;
                 margin-right: 8px;
-
             }
-
             .all-option {
                 span::after {
                     content: "全部";
                 }
             }
-
             .cat-option {
                 span::after {
                     content: "喵喵";
                 }
-
             }
-
             .dog-option {
                 span::after {
                     content: "汪汪";
                 }
-
             }
-
         }
     }
-    .search-wrap {
-        width: 280px;
-        height: 40px;
-        position: absolute;
-        right: 10%;
-        input {
-            height: 100%;
-            background: url("/public/search.svg") no-repeat scroll 10px 11px;
-            background-size: 16px 16px;
-            padding-left:30px;
-            border: 1px solid $c-gray-100;
-            background-color: $c-white;
-            border-radius: 25px;
-            &::placeholder {
-                color: $c-gray-100;
+    @include laptop {
+        // background: $c-main-200;
+        // padding: 4px 0;
+        // position: relative;
+        .menu-container {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            .filter-wrap {
+                display: flex;
             }
-            &[type=text] {
-                width: 250px;
-                -webkit-transition: width 0.4s ease-in-out;
-                transition: width 0.4s ease-in-out;
-              }
-              &[type=text]:focus {
-                outline: none;
-                border: 1px solid $c-main;
-                width: 100%;
-              }
-           
+            .option-wrap {
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // gap: 25px;
+                .option {
+                    // border-radius: 10px;
+                    // padding: 7px 10px;
+                    &.active {
+                        // background: $c-main;
+                        img {
+                            // filter: $f-white;
+                        }
+                        span {
+                            // color: $c-white;
+                        }
+                    }
+                    span {
+                        // letter-spacing: 0.15em;
+                        &::after {
+                            // font-size: 15px;
+                        }
+                    }
+                    &:hover {
+                        // background: $c-main-light;
+                        img {
+                            // filter: $f-white;
+                        }
+                        span {
+                            // color: $c-white;
+                        }
+                    }
+                }
+                img {
+                    // width: 27px;
+                    // height: 27px;
+                    // filter: $f-second;
+                    // margin-right: 8px;
+                }
+                .all-option {
+                    span::after {
+                        // content: "全部";
+                    }
+                }
+                .cat-option {
+                    span::after {
+                        // content: "喵喵";
+                    }
+                }
+                .dog-option {
+                    span::after {
+                        // content: "汪汪";
+                    }
+                }
+            }
         }
     }
-    
 }
