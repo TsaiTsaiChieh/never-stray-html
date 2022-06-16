@@ -2,134 +2,154 @@
     background: $c-main-200;
     padding: 12px 0;
     position: relative;
+
     .menu-container {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .filter-wrap {
             display: none;
+            position: absolute;
+            left: 10%;
+
+            img {
+                filter: $f-main;
+
+            }
+
+            span {
+                color: $c-main;
+                margin-left: 3px;
+                letter-spacing: 0.15em;
+            }
         }
+
         .option-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 5px;
+
             .option {
                 border-radius: 10px;
-                padding: 7px 5px;
+                padding: 6px 5px;
+
                 &.active {
                     background: $c-main;
+
                     img {
                         filter: $f-white;
                     }
+
                     span {
                         color: $c-white;
                     }
                 }
+
                 span {
                     letter-spacing: 0.15em;
+
                     &::after {
                         font-size: 15px;
                     }
                 }
+
                 &:hover {
                     background: $c-main-light;
+
                     img {
                         filter: $f-white;
                     }
+
                     span {
                         color: $c-white;
                     }
                 }
             }
+
             img {
                 width: 27px;
                 height: 27px;
                 filter: $f-second;
                 margin-right: 8px;
             }
+
             .all-option {
                 span::after {
                     content: "全部";
                 }
             }
+
             .cat-option {
                 span::after {
                     content: "喵喵";
                 }
             }
+
             .dog-option {
                 span::after {
                     content: "汪汪";
                 }
             }
         }
+
+        .search-box {
+            position: absolute;
+            right: 10%;
+        }
     }
-    @include laptop {
-        // background: $c-main-200;
-        // padding: 4px 0;
-        // position: relative;
+
+    @include pad {
         .menu-container {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             .filter-wrap {
                 display: flex;
+                position: absolute;
+                left: 7.5%;
+
             }
+
+            .search-box {
+                right: 7.5%;
+            }
+        }
+    }
+
+    @include mobile {
+
+        .menu-container {
+
+            .filter-wrap {
+                left: 5%;
+            }
+
             .option-wrap {
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
-                // gap: 25px;
-                .option {
-                    // border-radius: 10px;
-                    // padding: 7px 10px;
-                    &.active {
-                        // background: $c-main;
-                        img {
-                            // filter: $f-white;
-                        }
-                        span {
-                            // color: $c-white;
-                        }
-                    }
-                    span {
-                        // letter-spacing: 0.15em;
-                        &::after {
-                            // font-size: 15px;
-                        }
-                    }
-                    &:hover {
-                        // background: $c-main-light;
-                        img {
-                            // filter: $f-white;
-                        }
-                        span {
-                            // color: $c-white;
-                        }
-                    }
+
+                .cat-option,
+                .dog-option {
+                    padding: 6px 13.5px;
                 }
+
                 img {
-                    // width: 27px;
-                    // height: 27px;
-                    // filter: $f-second;
-                    // margin-right: 8px;
+                    display: none;
+
                 }
-                .all-option {
-                    span::after {
-                        // content: "全部";
-                    }
-                }
+
                 .cat-option {
                     span::after {
-                        // content: "喵喵";
+                        content: "貓";
                     }
                 }
+
                 .dog-option {
                     span::after {
-                        // content: "汪汪";
+                        content: "狗";
                     }
                 }
+            }
+
+            .search-box {
+                right: 5%;
             }
         }
     }
