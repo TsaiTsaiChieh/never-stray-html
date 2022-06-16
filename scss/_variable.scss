@@ -21,5 +21,6 @@ $c-gray-500: #4F4F4F;
 $c-gray-600: #333333;
 $c-gray-700: #000000;
 // filter
+$f-main: brightness(0) saturate(100%) invert(93%) sepia(91%) saturate(973%) hue-rotate(151deg) brightness(89%) contrast(96%);
 $f-second: invert(36%) sepia(76%) saturate(1207%) hue-rotate(144deg) brightness(94%) contrast(101%);
 $f-white: invert(95%) sepia(5%) saturate(0%) hue-rotate(5deg) brightness(103%) contrast(107%);
